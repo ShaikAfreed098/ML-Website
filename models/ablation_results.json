@@ -1,0 +1,30 @@
+[
+  {
+    "configuration": "Full Framework",
+    "accuracy": 0.8397037744863832,
+    "f1": 0.8653421633554084,
+    "params": 14,
+    "description": "Cleaning + Scaling + PCA (85% var) + SelectKBest + Ensemble"
+  },
+  {
+    "configuration": "Without Feature Selection",
+    "accuracy": 0.8394648829431438,
+    "f1": 0.8650060265166734,
+    "params": 14,
+    "description": "Uses full PCA components without SelectKBest filtering"
+  },
+  {
+    "configuration": "Without PCA",
+    "accuracy": 0.8311036789297659,
+    "f1": 0.8579465541490858,
+    "params": 14,
+    "description": "Applies feature selection directly on scaled features without PCA"
+  },
+  {
+    "configuration": "Without Both",
+    "accuracy": 0.8287147634973722,
+    "f1": 0.8578790882061448,
+    "params": 14,
+    "description": "Full feature matrix without PCA or feature selection"
+  }
+]

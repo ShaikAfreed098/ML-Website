@@ -1,0 +1,200 @@
+{
+  "dataset_name": "student_depression_dataset.csv",
+  "num_records": 27901,
+  "num_features_raw": 16,
+  "num_features_encoded": 122,
+  "pca_variance_ratio": 0.85,
+  "pca_components": 20,
+  "selected_k_features": 10,
+  "target_variable": "Depression",
+  "target_distribution": {
+    "1": 16336,
+    "0": 11565
+  },
+  "train_split": 0.7,
+  "val_split": 0.15,
+  "test_split": 0.15,
+  "best_model": "Stacking Classifier",
+  "best_accuracy": 0.8397037744863832,
+  "best_f1": 0.8653421633554084,
+  "version": "1.0.0",
+  "categorical_fields": {
+    "Gender": [
+      "Male",
+      "Female"
+    ],
+    "City": [
+      "Visakhapatnam",
+      "Bangalore",
+      "Srinagar",
+      "Varanasi",
+      "Jaipur",
+      "Pune",
+      "Thane",
+      "Chennai",
+      "Nagpur",
+      "Nashik",
+      "Vadodara",
+      "Kalyan",
+      "Rajkot",
+      "Ahmedabad",
+      "Kolkata",
+      "Mumbai",
+      "Lucknow",
+      "Indore",
+      "Surat",
+      "Ludhiana",
+      "Bhopal",
+      "Meerut",
+      "Agra",
+      "Ghaziabad",
+      "Hyderabad",
+      "Vasai-Virar",
+      "Kanpur",
+      "Patna",
+      "Faridabad",
+      "Delhi",
+      "Saanvi",
+      "M.Tech",
+      "Bhavna",
+      "'Less Delhi'",
+      "City",
+      "3.0",
+      "'Less than 5 Kalyan'",
+      "Mira",
+      "Harsha",
+      "Vaanya",
+      "Gaurav",
+      "Harsh",
+      "Reyansh",
+      "Kibara",
+      "Rashi",
+      "ME",
+      "M.Com",
+      "Nalyan",
+      "Mihir",
+      "Nalini",
+      "Nandini",
+      "Khaziabad"
+    ],
+    "Profession": [
+      "Student",
+      "'Civil Engineer'",
+      "Architect",
+      "'UX/UI Designer'",
+      "'Digital Marketer'",
+      "'Content Writer'",
+      "'Educational Consultant'",
+      "Teacher",
+      "Manager",
+      "Chef",
+      "Doctor",
+      "Lawyer",
+      "Entrepreneur",
+      "Pharmacist"
+    ],
+    "Sleep Duration": [
+      "'5-6 hours'",
+      "'Less than 5 hours'",
+      "'7-8 hours'",
+      "'More than 8 hours'",
+      "Others"
+    ],
+    "Dietary Habits": [
+      "Healthy",
+      "Moderate",
+      "Unhealthy",
+      "Others"
+    ],
+    "Degree": [
+      "B.Pharm",
+      "BSc",
+      "BA",
+      "BCA",
+      "M.Tech",
+      "PhD",
+      "'Class 12'",
+      "B.Ed",
+      "LLB",
+      "BE",
+      "M.Ed",
+      "MSc",
+      "BHM",
+      "M.Pharm",
+      "MCA",
+      "MA",
+      "B.Com",
+      "MD",
+      "MBA",
+      "MBBS",
+      "M.Com",
+      "B.Arch",
+      "LLM",
+      "B.Tech",
+      "BBA",
+      "ME",
+      "MHM",
+      "Others"
+    ],
+    "Have you ever had suicidal thoughts ?": [
+      "Yes",
+      "No"
+    ],
+    "Financial Stress": [
+      "1.0",
+      "2.0",
+      "5.0",
+      "3.0",
+      "4.0",
+      "?"
+    ],
+    "Family History of Mental Illness": [
+      "No",
+      "Yes"
+    ]
+  },
+  "numerical_fields": {
+    "Age": {
+      "min": 18.0,
+      "max": 59.0,
+      "mean": 25.82,
+      "default": 25.0
+    },
+    "Academic Pressure": {
+      "min": 0.0,
+      "max": 5.0,
+      "mean": 3.14,
+      "default": 3.0
+    },
+    "Work Pressure": {
+      "min": 0.0,
+      "max": 5.0,
+      "mean": 0.0,
+      "default": 0.0
+    },
+    "CGPA": {
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 7.66,
+      "default": 7.77
+    },
+    "Study Satisfaction": {
+      "min": 0.0,
+      "max": 5.0,
+      "mean": 2.94,
+      "default": 3.0
+    },
+    "Job Satisfaction": {
+      "min": 0.0,
+      "max": 4.0,
+      "mean": 0.0,
+      "default": 0.0
+    },
+    "Work/Study Hours": {
+      "min": 0.0,
+      "max": 12.0,
+      "mean": 7.16,
+      "default": 8.0
+    }
+  }
+}

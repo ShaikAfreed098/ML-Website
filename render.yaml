@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: resource-aware-ml-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+
+  - type: web
+    name: resource-aware-ml-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://resource-aware-ml-api.onrender.com
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
