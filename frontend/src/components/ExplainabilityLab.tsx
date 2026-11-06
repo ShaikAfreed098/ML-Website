@@ -35,7 +35,7 @@ export const ExplainabilityLab: React.FC<ExplainabilityLabProps> = ({ data }) =>
               <span className="text-xs font-mono text-slate-500">Permutation Sensitivity</span>
             </h3>
 
-            {globalImportance.length > 0 ? <div className="h-72 w-full">
+            <div className="h-72 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={globalImportance} layout="vertical" margin={{ top: 10, right: 30, left: 60, bottom: 10 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
@@ -49,7 +49,7 @@ export const ExplainabilityLab: React.FC<ExplainabilityLabProps> = ({ data }) =>
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
-            </div> : <div className="h-72 flex items-center justify-center text-xs text-slate-500">Feature importance data unavailable.</div>}
+            </div>
           </div>
 
           {/* Educational Insights Cards */}

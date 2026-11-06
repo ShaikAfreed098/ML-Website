@@ -43,7 +43,7 @@ export const EvaluationMatrix: React.FC<EvaluationMatrixProps> = ({ metrics, met
 
         </div>
 
-        {liveMetric && total > 0 ? <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Confusion Matrix Visual Card */}
           <div className="lg:col-span-6 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
@@ -133,7 +133,7 @@ export const EvaluationMatrix: React.FC<EvaluationMatrixProps> = ({ metrics, met
             </div>
           </div>
 
-        </div> : <div className="p-8 text-center text-xs text-slate-500">Evaluation results unavailable.</div>}
+        </div>
 
       </div>
     </section>

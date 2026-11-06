@@ -34,7 +34,7 @@ export const AblationSection: React.FC<AblationSectionProps> = ({ ablationData }
           </p>
         </div>
 
-        {items.length > 0 ? <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Performance Degradation Chart */}
           <div className="lg:col-span-6 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
@@ -95,7 +95,7 @@ export const AblationSection: React.FC<AblationSectionProps> = ({ ablationData }
             ))}
           </div>
 
-        </div> : <div className="p-8 text-center text-xs text-slate-500">Ablation results unavailable.</div>}
+        </div>
 
       </div>
     </section>

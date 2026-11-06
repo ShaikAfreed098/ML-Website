@@ -131,8 +131,7 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
                   <span className="text-xs font-mono text-slate-500">Status</span>
                 </h3>
 
-                {targetData.length > 0 ? (
-                  <div className="h-64 w-full">
+                <div className="h-64 w-full">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart data={targetData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
@@ -144,10 +143,7 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
                         </Bar>
                       </BarChart>
                     </ResponsiveContainer>
-                  </div>
-                ) : (
-                  <div className="h-64 flex items-center justify-center text-xs text-slate-500">Target distribution unavailable.</div>
-                )}
+                </div>
 
                 <div className="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-slate-100 text-xs">
                   <div className="flex items-center gap-2">
@@ -202,8 +198,7 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
               <h3 className="text-sm font-semibold text-slate-900 mb-4">
                 Academic Pressure Distribution (1-5 Scale)
               </h3>
-              {acadPressureData.length > 0 ? (
-                <div className="h-60 w-full">
+              <div className="h-60 w-full">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={acadPressureData}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
@@ -213,8 +208,7 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
                       <Bar dataKey="count" fill="#475569" radius={[4, 4, 0, 0]} />
                     </BarChart>
                   </ResponsiveContainer>
-                </div>
-              ) : <div className="h-60 flex items-center justify-center text-xs text-slate-500">Academic pressure data unavailable.</div>}
+              </div>
             </div>
 
             {/* Sleep Duration Distribution */}
@@ -222,8 +216,7 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
               <h3 className="text-sm font-semibold text-slate-900 mb-4">
                 Sleep Duration Categories
               </h3>
-              {sleepData.length > 0 ? (
-                <div className="h-60 w-full">
+              <div className="h-60 w-full">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={sleepData}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
@@ -233,8 +226,7 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
                       <Bar dataKey="count" fill="#0EA5E9" radius={[4, 4, 0, 0]} />
                     </BarChart>
                   </ResponsiveContainer>
-                </div>
-              ) : <div className="h-60 flex items-center justify-center text-xs text-slate-500">Sleep duration data unavailable.</div>}
+              </div>
             </div>
           </div>
         )}
@@ -249,7 +241,7 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
               <span className="text-[10px] text-slate-500 font-mono">{datasetInfo?.total_rows.toLocaleString() || '—'} Total Rows</span>
             </div>
 
-            {datasetInfo?.sample_records?.length ? <div className="overflow-x-auto">
+            <div className="overflow-x-auto">
               <table className="w-full text-left text-xs text-slate-700">
                 <thead className="bg-slate-100 text-slate-600 font-mono uppercase text-[10px] border-b border-slate-200">
                   <tr>
@@ -263,7 +255,7 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200/60 font-mono">
-                  {datasetInfo.sample_records.length > 0 ? (
+                  {datasetInfo?.sample_records ? (
                     datasetInfo.sample_records.map((rec, i) => (
                       <tr key={i} className="hover:bg-slate-50">
                         <td className="px-4 py-2.5 text-slate-900">{rec.Gender || '—'}</td>
@@ -283,10 +275,12 @@ export const DatasetExplorer: React.FC<DatasetExplorerProps> = ({ datasetInfo })
                         </td>
                       </tr>
                     ))
-                  ) : null}
+                  ) : (
+                    <tr><td colSpan={7} className="px-4 py-6 text-center text-slate-500">Loading dataset records...</td></tr>
+                  )}
                 </tbody>
               </table>
-            </div> : <div className="p-8 text-center text-xs text-slate-500">Sample records unavailable.</div>}
+            </div>
           </div>
         )}
 

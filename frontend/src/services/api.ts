@@ -25,6 +25,7 @@ export const api = {
   async getModelsComparison(): Promise<{
     live_models: Record<string, ModelMetric>;
     metadata: ModelMetadata;
+    paper_results?: { accuracy: number; f1: number; label: string };
   }> {
     const res = await axios.get(`${API_BASE}/models`);
     return res.data;

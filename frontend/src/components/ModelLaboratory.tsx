@@ -96,7 +96,7 @@ export const ModelLaboratory: React.FC<ModelLaboratoryProps> = ({ metrics, metad
           </div>
         </div>
 
-        {modelList.length > 0 ? <>
+        <>
         {/* Chart View */}
         <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs mb-8">
           <h3 className="text-sm font-semibold text-slate-900 mb-4 flex items-center justify-between">
@@ -186,7 +186,7 @@ export const ModelLaboratory: React.FC<ModelLaboratoryProps> = ({ metrics, metad
             </table>
           </div>
         </div>
-        </> : <div className="p-8 text-center text-xs text-slate-500">Model evaluation data unavailable.</div>}
+        </>
 
       </div>
     </section>

@@ -86,6 +86,7 @@ export interface DatasetInfo {
 export interface ExplainabilityData {
   methodology: string;
   global_importance: { feature: string; importance: number }[];
+  shap_summary?: string;
 }
 
 export interface AblationItem {
