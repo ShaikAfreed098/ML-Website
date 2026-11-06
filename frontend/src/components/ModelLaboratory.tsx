@@ -36,6 +36,12 @@ export const ModelLaboratory: React.FC<ModelLaboratoryProps> = ({ metrics, metad
 
   const bestModelName = metadata?.best_model || '';
 
+  const illustrativeReference = {
+    accuracy: '92.40%',
+    f1: '92.38%',
+    source: 'Conference paper reference'
+  };
+
   return (
     <section id="models" className="py-8 border-t border-slate-200">
       <div className="max-w-7xl mx-auto">
@@ -70,6 +76,23 @@ export const ModelLaboratory: React.FC<ModelLaboratoryProps> = ({ metrics, metad
                 {metricKey}
               </button>
             ))}
+          </div>
+        </div>
+
+        <div className="mb-8 p-4 rounded-2xl border border-amber-200 bg-amber-50/70">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <div className="text-xs font-mono font-semibold uppercase tracking-wider text-amber-900">
+                Illustrative Reference Values
+              </div>
+              <p className="text-xs text-amber-800 mt-1">
+                These values are retained for context only and are not from the live model artifacts.
+              </p>
+            </div>
+            <div className="flex items-center gap-5 font-mono text-xs text-amber-950">
+              <span>Accuracy: <strong>{illustrativeReference.accuracy}</strong></span>
+              <span>F1: <strong>{illustrativeReference.f1}</strong></span>
+            </div>
           </div>
         </div>
 
